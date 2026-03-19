@@ -1,0 +1,123 @@
+:root {
+    --vintage-gold: #c5a059;
+    --paper-white: #f4f1ea;
+    --dark-ink: #2b2621;
+    --sidebar-bg: #1e1b18;
+}
+
+body {
+    margin: 0;
+    font-family: 'Special Elite', system-ui; /* Vintage typewriter font */
+    background-color: #12110f;
+    color: var(--paper-white);
+    overflow: hidden;
+}
+
+.dashboard {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--sidebar-bg);
+    border-bottom: 1px solid var(--vintage-gold);
+}
+
+.main-title {
+    font-size: 1.8rem;
+    color: var(--vintage-gold);
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.archive-text {
+    color: #8c7851;
+    font-size: 0.9rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    flex-grow: 1;
+}
+
+.sidebar {
+    background: var(--sidebar-bg);
+    padding: 30px;
+    border-right: 1px solid #332d28;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.widget label {
+    display: block;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    color: var(--vintage-gold);
+    border-bottom: 1px solid #332d28;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    background: #12110f;
+    color: var(--paper-white);
+    border: 1px solid #443e38;
+    padding: 12px;
+    font-family: 'Courier Prime', monospace;
+    resize: none;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    background: #12110f;
+    color: var(--paper-white);
+    border: 1px solid var(--vintage-gold);
+    font-family: 'Special Elite', serif;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: var(--vintage-gold);
+    color: var(--dark-ink);
+    border: none;
+    font-family: 'Special Elite', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: #e6bc6a;
+    transform: translateY(-2px);
+}
+
+.preview-area {
+    padding: 40px;
+    overflow-y: auto;
+    background-color: #1a1815;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+}
+
+.canvas-wrapper {
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    width: fit-content;
+    margin: 0 auto;
+    border: 10px solid #2b2621;
+}
+
+#canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

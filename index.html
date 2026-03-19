@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 SURVIVOR | VINTAGE ARCHIVE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Homemade+Apple&family=Cedarville+Cursive&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header class="top-nav">
+            <div class="status-box">FILE_STATUS: <span class="archive-text">ARCHIVED_2020</span></div>
+            <h1 class="main-title">COVID-19 SURVIVOR</h1>
+            <div class="date-display" id="currentDate"></div>
+        </header>
+        
+        <div class="main-grid">
+            <div class="sidebar">
+                <div class="widget">
+                    <label>MANUSCRIPT INPUT</label>
+                    <textarea id="inputText" placeholder="Commence typing your record..."></textarea>
+                </div>
+
+                <div class="widget">
+                    <label>PEN_TYPE</label>
+                    <select id="fontSelect">
+                        <option value="'Homemade Apple', cursive">Classic Fountain Pen</option>
+                        <option value="'Cedarville Cursive', cursive">Handwritten Script</option>
+                        <option value="'Courier Prime', monospace">Mechanical Typewriter</option>
+                    </select>
+                </div>
+
+                <button id="downloadBtn">EXPORT PERMANENT RECORD (PDF)</button>
+            </div>
+
+            <div class="preview-area">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
